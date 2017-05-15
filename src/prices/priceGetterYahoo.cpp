@@ -18,7 +18,7 @@ QString priceGetterYahoo::getCSVAddress(const QString &symbol_, const QDate &beg
 
 QString priceGetterYahoo::getSplitAddress(const QString &symbol)
 {
-    return QString("http://finance.yahoo.com/q/bc?t=my&l=on&z=l&q=l&p=&a=&c=&s=%1").arg(symbol);
+    return QString("http://finance.yahoo.com/d/quotes.csv?t=my&l=on&z=l&q=l&p=&a=&c=&s=%1").arg(symbol);
 }
 
 QList<QByteArray> priceGetterYahoo::downloadFile(const QUrl &url_, bool splitResultByLineBreak_)
